@@ -1,0 +1,15 @@
+comments(first:100 %(filter)s) {
+	%(pageInfo)s
+	edges {
+		node {
+			id
+			body
+			author {
+				login
+			}
+			authorAssociation
+			createdAt
+			lastEditedAt
+		}
+	}
+}

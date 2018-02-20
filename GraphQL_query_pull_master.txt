@@ -1,0 +1,35 @@
+query {
+  repository(owner:"%(repo_owner_name)s", name:"%(repo_name)s") {
+    pullRequests(first:%(number_of_scraping_pulls)s %(filter)s) {
+      %(pageInfo)s
+      edges {
+        node {
+          id
+					title
+					body
+					author {
+						login
+					}
+					authorAssociation
+					number
+					additions
+					deletions
+					changedFiles
+					state
+					mergedAt
+					createdAt
+					lastEditedAt
+					repository {
+						id
+					} 
+        }
+      }
+    }
+  }
+  rateLimit {
+    limit
+    cost
+    remaining
+    resetAt
+  }
+}

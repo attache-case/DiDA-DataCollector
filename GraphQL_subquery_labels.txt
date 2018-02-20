@@ -1,0 +1,8 @@
+labels(first:100 %(filter)s) {
+	%(pageInfo)s
+	edges {
+		node {
+			name
+		}
+	}
+}

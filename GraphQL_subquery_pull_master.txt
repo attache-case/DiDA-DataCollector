@@ -1,0 +1,14 @@
+query{
+	nodes(ids:[%(str_ids)s]) {
+		... on PullRequest {
+			id
+			%(subquery)s
+		}
+	}
+	rateLimit {
+    limit
+    cost
+    remaining
+    resetAt
+  }
+}

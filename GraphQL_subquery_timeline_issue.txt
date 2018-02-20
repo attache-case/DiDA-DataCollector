@@ -1,0 +1,101 @@
+timeline(first:100 %(filter)s) {
+	%(pageInfo)s
+	edges {
+		node {
+			__typename
+			... on Commit {
+				id
+				oid
+				author {
+					user {
+						login
+					}
+				}
+				committer {
+					user {
+						login
+					}
+				}
+				repository {
+					id
+				}
+				message
+				messageBody
+				committedDate
+				pushedDate
+			}
+			... on IssueComment {
+				id
+			}
+			... on CrossReferencedEvent {
+				id
+				isCrossRepository
+				referencedAt
+				source {
+					__typename
+					... on PullRequest {
+						id
+						number
+					}
+					... on Issue {
+						id
+						number
+					}
+				}
+				target {
+					__typename
+					... on PullRequest {
+						id
+						number
+					}
+					... on Issue {
+						id
+						number
+					}
+				}
+			}
+			... on AssignedEvent {
+				createdAt
+			}
+			... on ClosedEvent {
+				createdAt
+			}
+			... on DemilestonedEvent {
+				createdAt
+			}
+			... on LabeledEvent {
+				createdAt
+			}
+			... on LockedEvent {
+				createdAt
+			}
+			... on MilestonedEvent {
+				createdAt
+			}
+			... on ReferencedEvent {
+				createdAt
+			}
+			... on RenamedTitleEvent {
+				createdAt
+			}
+			... on ReopenedEvent {
+				createdAt
+			}
+			... on SubscribedEvent {
+				createdAt
+			}
+			... on UnassignedEvent {
+				createdAt
+			}
+			... on UnlabeledEvent {
+				createdAt
+			}
+			... on UnlockedEvent {
+				createdAt
+			}
+			... on UnsubscribedEvent {
+				createdAt
+			}
+		}
+	}
+}

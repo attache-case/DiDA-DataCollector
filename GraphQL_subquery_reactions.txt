@@ -1,0 +1,13 @@
+reactions(first:100 %(filter)s) {
+	%(pageInfo)s
+	edges {
+		node {
+			id
+			user {
+				login
+			}
+			content
+			createdAt
+		}
+	}
+}

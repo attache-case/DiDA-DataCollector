@@ -1,0 +1,28 @@
+commits(first: 100 %(filter)s) {
+	%(pageInfo)s
+	edges {
+		node {
+			commit {
+				id
+				oid
+				author {
+					user {
+						login
+					}
+				}
+				committer {
+					user {
+						login
+					}
+				}
+				repository {
+					id
+				}
+				message
+				messageBody
+				committedDate
+				pushedDate
+			}
+		}
+	}
+}
