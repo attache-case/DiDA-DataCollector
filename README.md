@@ -11,7 +11,7 @@ chmod 755 ./run.sh
 - modify `env.py`
   - Please request @attache-case for MongoDB Connection String
     - replace "PLEASE_ASK_ADMIN_FOR_CONNECTION_STRING" with the string
-  - Please fill your GitHub Personal Access Token
+  - Get your GitHub Personal Access Token
     - add your token info to `personal_access_token_list`
 - modify `main.py`
   1. Create your Slack webhook to get error info
