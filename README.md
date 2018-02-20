@@ -19,10 +19,6 @@ chmod 755 ./run.sh
 
 ### run script
 ```bash
-git clone https:/github.com/attache-case/DiDA-DataCollector.git
-cd DiDA-DataCollector
-screen -S scraping # use screen
-chmod 755 ./run.sh
 ./run.sh N_PROCESSORS # start script
 (keyboard) ^A-d # detach
 screen -r scraping # re-attach
